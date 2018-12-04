@@ -23,6 +23,10 @@ echo "Done!"
 info "Add PHp 7.1 repository"
 add-apt-repository ppa:ondrej/php -y
 
+info "Add yarn repository"
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+
 #info "Add Oracle JDK repository"
 #add-apt-repository ppa:webupd8team/java -y
 
@@ -39,6 +43,11 @@ apt-get install -y php7.1-curl php7.1-cli php7.1-intl php7.1-mysqlnd php7.1-gd p
 
 info "Install additional software"
 apt-get install -y unzip nginx mysql-server-5.7 git-core curl mc htop
+
+info "Install Nodejs"
+#https://github.com/nodesource/distributions/blob/master/README.md#debinstall
+curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+apt-get install -y nodejs npm yarn
 
 
 #info "Install Oracle JDK"
