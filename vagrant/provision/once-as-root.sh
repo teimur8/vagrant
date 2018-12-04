@@ -38,7 +38,7 @@ info "Install php"
 apt-get install -y php7.1-curl php7.1-cli php7.1-intl php7.1-mysqlnd php7.1-gd php7.1-fpm php7.1-mbstring php7.1-xml php7.1-zip
 
 info "Install additional software"
-apt-get install -y unzip nginx mysql-server-5.7 git-core curl mc
+apt-get install -y unzip nginx mysql-server-5.7 git-core curl mc htop
 
 
 #info "Install Oracle JDK"
