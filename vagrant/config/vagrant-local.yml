@@ -1,0 +1,17 @@
+# Guest OS timezone
+timezone: Asia/Almaty
+
+# Are we need check box updates for every 'vagrant up'?
+box_check_update: false
+
+# Virtual machine name
+machine_name: vm1
+
+# Virtual machine IP
+ip: 192.168.83.137
+
+# Virtual machine CPU cores number
+cpus: 1
+
+# Virtual machine RAM
+memory: 512
