@@ -47,6 +47,8 @@ Vagrant.configure(2) do |config|
 
   # network settings
   config.vm.network 'private_network', ip: options['ip']
+  #forward mysql port
+  #config.vm.network "forwarded_port", guest: 3306, host: 3310
 
   # sync: folder 'yii2-app-advanced' (host machine) -> folder '/app' (guest machine)
   config.vm.synced_folder './src', '/app', owner: 'vagrant', group: 'vagrant'
